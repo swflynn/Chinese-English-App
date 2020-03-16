@@ -48,16 +48,38 @@ people with linguistics and education backgrouds to comment on our approach
 Current vocabulary available organized by level
 
 \section*{Database}
+A database is simply an organized collection of related information.
+DBMS stands for database management systems which is software designed for
+creating and maintaining databases.
+Generally when you work with a database you are creating, reading from, updating,
+and deleting information.
+A DBMS provides these 4 major functions.
+
+There are two major types of databases, SQL (relational) and non-relational
+(noSQL).
+Relational databases are the most common, they create tables and store the
+data within these tables.
+noSQL are simply anything else.
+mySQL and Oracle are relational DBMS and use SQL to interact with the database.
+mongoDB, apache are examples of noSQL DBMS.
+
+SQL is standardized, across platforms there is slight changes in syntax but
+equivalent structure, the same is not true for noSQL methods.
+
 Given our data space will not be changing (name-english name-chinese Pinyin
 tones audio) we do not need to use object-oriented methods for the database and will
 simply use a relational database.
 For development SQLite seems ideal as it can be used directly from standard
-python library and is light-weight.
-It also does not require an intermetdiate we can simply make the database
-directly.
+python library and it does not require us to make a server.
+We will have 1 file with tables and the tables contain the data, our entire
+database is just one file.
 
 In the future we could imagine increasing the dataspace to have user information
 for development we will just focus on the application itself.
+
+Another option would be a non-relation database like JSON where you store
+all your information in a file (something like a dictionary in python).
+
 
 \section*{Card Selection Implementation}
 The choice of which card to test is crucial.
